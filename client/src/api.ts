@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const api = axios.create({ baseURL: '/api' });
+const api = axios.create({ baseURL: 'https://autopulse-ai-oro1.onrender.com/api' });
 
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem('autopulse-token');
