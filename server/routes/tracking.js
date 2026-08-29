@@ -1,0 +1,2 @@
+import express from 'express'; import { protect } from '../middleware/auth.js'; import { ingest, current, history, createGeofence, getGeofences } from '../controllers/trackingController.js';
+const router=express.Router(); router.post('/vehicles/:vehicleId/telemetry',protect,ingest); router.get('/vehicles/:vehicleId/current',protect,current); router.get('/vehicles/:vehicleId/history',protect,history); router.get('/geofences',protect,getGeofences); router.post('/geofences',protect,createGeofence); export default router;

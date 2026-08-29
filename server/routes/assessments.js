@@ -1,0 +1,2 @@
+import express from 'express'; import { protect } from '../middleware/auth.js'; import { assessmentRequirements, assessmentHistory, latestAssessment, saveAssessment } from '../controllers/assessmentController.js';
+const router = express.Router(); router.get('/requirements', protect, assessmentRequirements); router.get('/:vehicleId/latest', protect, latestAssessment); router.get('/:vehicleId/history', protect, assessmentHistory); router.post('/:vehicleId', protect, saveAssessment); export default router;

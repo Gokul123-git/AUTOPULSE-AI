@@ -1,0 +1,40 @@
+import express from 'express';
+import healthRoutes from './health.js';
+import dashboardRoutes from './dashboard.js';
+import metricsRoutes from './metrics.js';
+import appointmentsRoutes from './appointments.js';
+import driversRoutes from './drivers.js';
+import invoicesRoutes from './invoices.js';
+import mechanicsRoutes from './mechanics.js';
+import notificationsRoutes from './notifications.js';
+import serviceCentersRoutes from './serviceCenters.js';
+import inventoryRoutes from './inventory.js';
+import predictionRoutes from './predictions.js';
+import vehicleRoutes from './vehicles.js';
+import authRoutes from './auth.js';
+import healthReadingRoutes from './healthReadings.js';
+import maintenanceRoutes from './maintenance.js';
+import assessmentRoutes from './assessments.js';
+import trackingRoutes from './tracking.js';
+
+const router = express.Router();
+
+router.use('/health', healthRoutes);
+router.use('/dashboard', dashboardRoutes);
+router.use('/metrics', metricsRoutes);
+router.use('/appointments', appointmentsRoutes);
+router.use('/drivers', driversRoutes);
+router.use('/invoices', invoicesRoutes);
+router.use('/mechanics', mechanicsRoutes);
+router.use('/notifications', notificationsRoutes);
+router.use('/service-centers', serviceCentersRoutes);
+router.use('/inventory', inventoryRoutes);
+router.use('/predictions', predictionRoutes);
+router.use('/vehicles', vehicleRoutes);
+router.use('/auth', authRoutes);
+router.use('/health-readings', healthReadingRoutes);
+router.use('/maintenance', maintenanceRoutes);
+router.use('/assessments', assessmentRoutes);
+router.use('/tracking', trackingRoutes);
+
+export default router;
